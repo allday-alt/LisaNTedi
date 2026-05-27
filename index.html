@@ -1,1124 +1,1148 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Wedding Invitation | Lisa & Tedi</title>
-
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-
-    :root{
-      --gold:#c7a56a;
-      --gold-dark:#ae8b50;
-      --dark:#1f1f1f;
-      --soft:#f8f5f1;
-      --white:#ffffff;
-      --red:#8b1e24;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Poppins',sans-serif;
-      background:var(--soft);
-      color:var(--dark);
-      overflow-x:hidden;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:70px 18px;
-      position:relative;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Wedding Invitation | Lisa & Tedi</title>
 
-    /* =========================
-       HERO
-    ========================= */
+<!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --maroon:#4b0d18;
+  --maroon2:#651425;
+  --gold:#d4b06a;
+  --gold2:#b8924f;
+  --soft:#f7f3ef;
+  --dark:#1d1d1d;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--soft);
+  color:var(--dark);
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
 
-    .hero{
-      min-height:100vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-      url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1400&auto=format&fit=crop');
+section{
+  padding:70px 18px;
+}
 
-      background-size:cover;
-      background-position:center;
+/* =========================
+   HERO
+========================= */
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
+.hero{
+  min-height:100vh;
 
-      text-align:center;
+  background:
+  linear-gradient(rgba(40,0,10,0.72),rgba(20,0,0,0.78)),
+  url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop');
 
-      padding:30px 20px;
+  background-size:cover;
+  background-position:center;
 
-      color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-      position:relative;
-      overflow:hidden;
-    }
+  text-align:center;
 
-    .hero-content{
-      width:100%;
-      max-width:430px;
-      animation:fadeUp 1.5s ease;
-    }
+  position:relative;
+  overflow:hidden;
 
-    .guest-box{
-      margin-bottom:40px;
-    }
+  color:white;
+}
 
-    .guest-label{
-      font-size:12px;
-      letter-spacing:3px;
-      opacity:0.8;
-    }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
-    #guestName{
-      margin-top:10px;
-      font-size:28px;
-      font-weight:500;
-      line-height:1.4;
-    }
+  background:
+  radial-gradient(circle at top left,
+  rgba(212,176,106,0.2),
+  transparent 30%),
 
-    .save{
-      letter-spacing:4px;
-      font-size:12px;
-      opacity:0.9;
-    }
+  radial-gradient(circle at bottom right,
+  rgba(212,176,106,0.15),
+  transparent 30%);
+}
 
-    .hero h1{
-      margin-top:18px;
-      font-size:58px;
-      line-height:1.1;
-      font-family:'Cormorant Garamond',serif;
-      font-weight:600;
-    }
+.hero-content{
+  position:relative;
+  z-index:2;
 
-    .hero h1 span{
-      display:block;
-      color:var(--gold);
-      margin:8px 0;
-      font-size:42px;
-    }
+  width:100%;
+  max-width:430px;
 
-    .date{
-      margin-top:22px;
-      font-size:16px;
-      letter-spacing:2px;
-    }
+  animation:fadeUp 1.5s ease;
+}
 
-    .open-btn{
-      margin-top:35px;
+.guest-box{
+  margin-bottom:40px;
+}
 
-      border:none;
+.guest-label{
+  letter-spacing:4px;
+  font-size:11px;
+  opacity:0.8;
+}
 
-      padding:15px 34px;
+#guestName{
+  margin-top:12px;
 
-      border-radius:999px;
+  font-size:28px;
+  line-height:1.4;
+  font-weight:500;
+}
 
-      background:var(--gold);
+.save{
+  letter-spacing:5px;
+  font-size:11px;
+  opacity:0.8;
+}
 
-      color:white;
+.hero h1{
+  margin-top:18px;
 
-      font-size:14px;
+  font-size:58px;
+  line-height:1.1;
 
-      cursor:pointer;
+  font-family:'Cormorant Garamond',serif;
+}
 
-      transition:0.4s;
-    }
+.hero h1 span{
+  display:block;
+  color:var(--gold);
 
-    .open-btn:hover{
-      background:var(--gold-dark);
-      transform:translateY(-3px);
-    }
+  margin:10px 0;
+}
 
-    /* =========================
-       CARD
-    ========================= */
+.date{
+  margin-top:20px;
 
-    .card{
-      background:white;
+  letter-spacing:2px;
+  font-size:15px;
+}
 
-      border-radius:28px;
+.open-btn{
+  margin-top:35px;
 
-      padding:40px 24px;
+  border:none;
+  outline:none;
 
-      max-width:500px;
+  background:linear-gradient(
+  135deg,
+  var(--gold),
+  var(--gold2)
+  );
 
-      margin:auto;
+  color:white;
 
-      text-align:center;
+  padding:15px 36px;
 
-      box-shadow:
-      0 10px 40px rgba(0,0,0,0.06);
-    }
+  border-radius:999px;
 
-    .section-subtitle{
-      color:var(--gold);
-      letter-spacing:4px;
-      font-size:11px;
-      text-transform:uppercase;
-    }
+  font-size:14px;
+  cursor:pointer;
 
-    .section-title{
-      margin-top:12px;
+  transition:0.4s;
+}
 
-      font-size:42px;
+.open-btn:hover{
+  transform:translateY(-4px);
+}
 
-      font-family:'Cormorant Garamond',serif;
+/* =========================
+   CARD
+========================= */
 
-      color:var(--dark);
-    }
+.card{
+  background:white;
 
-    .quote{
-      margin-top:24px;
+  max-width:550px;
 
-      color:var(--gold);
+  margin:auto;
 
-      font-size:24px;
+  border-radius:30px;
 
-      line-height:1.7;
+  padding:45px 25px;
 
-      font-family:'Cormorant Garamond',serif;
-    }
+  text-align:center;
 
-    .description{
-      margin-top:24px;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.07);
+}
 
-      line-height:2;
+.section-subtitle{
+  color:var(--gold2);
 
-      font-size:14px;
+  font-size:11px;
 
-      color:#555;
-    }
+  letter-spacing:4px;
+}
 
-    /* =========================
-       PREWEDDING PHOTO
-    ========================= */
+.section-title{
+  margin-top:14px;
 
-    .couple-photo{
-      margin-top:35px;
+  font-size:46px;
 
-      border-radius:24px;
+  font-family:'Cormorant Garamond',serif;
+}
 
-      overflow:hidden;
+.description{
+  margin-top:24px;
 
-      position:relative;
-    }
+  line-height:2;
+  font-size:14px;
 
-    .couple-photo img{
-      height:480px;
-      object-fit:cover;
-    }
+  color:#555;
+}
 
-    .photo-overlay{
-      position:absolute;
-      inset:0;
+.quote{
+  margin-top:24px;
 
-      background:
-      linear-gradient(
-      to top,
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.1)
-      );
-    }
+  color:var(--gold2);
 
-    .photo-text{
-      position:absolute;
+  font-size:26px;
 
-      bottom:25px;
+  line-height:1.7;
 
-      left:25px;
+  font-family:'Cormorant Garamond',serif;
+}
 
-      color:white;
+/* =========================
+   PHOTO COVER
+========================= */
 
-      text-align:left;
-    }
+.couple-photo{
+  margin-top:35px;
 
-    .photo-text h3{
-      font-size:34px;
-      font-family:'Cormorant Garamond',serif;
-    }
+  position:relative;
 
-    .photo-text p{
-      margin-top:5px;
-      letter-spacing:2px;
-      font-size:12px;
-    }
+  border-radius:28px;
+  overflow:hidden;
+}
 
-    /* =========================
-       EVENT
-    ========================= */
+.couple-photo img{
+  height:500px;
+  object-fit:cover;
+}
 
-    .detail{
-      margin-top:18px;
-      line-height:1.8;
-      font-size:15px;
-    }
+.photo-overlay{
+  position:absolute;
+  inset:0;
 
-    /* =========================
-       COUNTDOWN
-    ========================= */
+  background:
+  linear-gradient(
+  to top,
+  rgba(0,0,0,0.7),
+  rgba(0,0,0,0.05)
+  );
+}
 
-    .countdown{
-      margin-top:35px;
+.photo-text{
+  position:absolute;
 
-      display:grid;
+  bottom:25px;
+  left:25px;
 
-      grid-template-columns:
-      repeat(2,1fr);
+  color:white;
+  text-align:left;
+}
 
-      gap:14px;
-    }
+.photo-text h3{
+  font-size:36px;
+  font-family:'Cormorant Garamond',serif;
+}
 
-    .time-box{
-      background:var(--dark);
+.photo-text p{
+  margin-top:6px;
 
-      color:white;
+  letter-spacing:3px;
+  font-size:11px;
+}
 
-      border-radius:22px;
+/* =========================
+   EVENT
+========================= */
 
-      padding:22px 10px;
-    }
+.detail{
+  margin-top:18px;
 
-    .time-box h3{
-      font-size:30px;
-      color:var(--gold);
-    }
+  line-height:1.8;
+  font-size:15px;
+}
 
-    .time-box span{
-      font-size:13px;
-      opacity:0.8;
-    }
+/* =========================
+   COUNTDOWN
+========================= */
 
-    /* =========================
-       BUTTON
-    ========================= */
+.countdown{
+  margin-top:35px;
 
-    .btn{
-      display:inline-block;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
 
-      margin-top:32px;
+  gap:14px;
+}
 
-      text-decoration:none;
+.time-box{
+  background:linear-gradient(
+  135deg,
+  var(--maroon),
+  #25040b
+  );
 
-      background:var(--gold);
+  color:white;
 
-      color:white;
+  border-radius:24px;
 
-      padding:14px 30px;
+  padding:24px 10px;
+}
 
-      border-radius:999px;
+.time-box h3{
+  color:var(--gold);
 
-      font-size:14px;
+  font-size:30px;
+}
 
-      transition:0.4s;
-    }
+.time-box span{
+  font-size:13px;
+  opacity:0.8;
+}
 
-    .btn:hover{
-      background:var(--gold-dark);
-    }
+/* =========================
+   BUTTON
+========================= */
 
-    /* =========================
-       GALLERY
-    ========================= */
+.btn{
+  display:inline-block;
 
-    #gallery{
-      text-align:center;
-    }
+  margin-top:30px;
 
-    .gallery{
-      margin-top:35px;
+  text-decoration:none;
 
-      display:grid;
+  background:linear-gradient(
+  135deg,
+  var(--gold),
+  var(--gold2)
+  );
 
-      gap:18px;
-    }
+  color:white;
 
-    .gallery img{
-      border-radius:24px;
+  padding:14px 30px;
 
-      height:420px;
+  border-radius:999px;
 
-      object-fit:cover;
+  font-size:14px;
 
-      box-shadow:
-      0 10px 30px rgba(0,0,0,0.08);
-    }
+  transition:0.4s;
+}
 
-    /* =========================
-       COUPLE
-    ========================= */
+.btn:hover{
+  transform:translateY(-3px);
+}
 
-    .couple-wrapper{
-      margin-top:40px;
+/* =========================
+   GALLERY
+========================= */
 
-      display:flex;
-      flex-direction:column;
-      gap:30px;
+.gallery{
+  margin-top:35px;
 
-      align-items:center;
-    }
+  display:grid;
+  gap:18px;
+}
 
-    .couple-item img{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
+.gallery img{
+  height:420px;
 
-      border:5px solid var(--gold);
+  object-fit:cover;
 
-      margin:auto;
-    }
+  border-radius:28px;
+}
 
-    .couple-item h3{
-      margin-top:18px;
+/* =========================
+   COUPLE
+========================= */
 
-      font-size:32px;
+.couple-wrapper{
+  margin-top:40px;
 
-      font-family:'Cormorant Garamond',serif;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    .couple-item p{
-      margin-top:10px;
-      line-height:1.8;
-      font-size:14px;
-    }
+  gap:20px;
 
-    .heart{
-      font-size:32px;
-      color:var(--red);
-    }
+  flex-wrap:wrap;
+}
 
-    /* =========================
-       LOVE GALLERY
-    ========================= */
+.couple-item{
+  width:210px;
+}
 
-    .love-gallery{
-      margin-top:35px;
+.photo-circle{
+  width:180px;
+  height:180px;
 
-      display:grid;
-      gap:18px;
-    }
+  margin:auto;
 
-    .love-gallery img{
-      width:100%;
-      height:420px;
-      object-fit:cover;
+  border-radius:50%;
+  overflow:hidden;
 
-      border-radius:28px;
-    }
+  border:5px solid var(--gold);
 
-    /* =========================
-       QUOTE BOX
-    ========================= */
+  position:relative;
+}
 
-    .quote-box{
-      background:var(--dark);
+/* FOTO TERPISAH DARI 1 FOTO */
 
-      color:white;
+.bride-photo{
+  width:100%;
+  height:100%;
 
-      padding:70px 30px;
+  object-fit:cover;
 
-      border-radius:30px;
+  object-position:left center;
 
-      max-width:800px;
+  transform:scale(1.6);
+}
 
-      margin:auto;
+.groom-photo{
+  width:100%;
+  height:100%;
 
-      text-align:center;
-    }
+  object-fit:cover;
 
-    .quote-icon{
-      font-size:60px;
-      color:var(--gold);
-    }
+  object-position:right center;
 
-    .big-quote{
-      margin-top:10px;
+  transform:scale(1.6);
+}
 
-      line-height:2;
+.couple-item h3{
+  margin-top:20px;
 
-      font-size:20px;
+  font-size:34px;
+  line-height:1.2;
 
-      font-family:'Cormorant Garamond',serif;
-    }
+  font-family:'Cormorant Garamond',serif;
+}
 
-    .quote-source{
-      margin-top:25px;
+.couple-item p{
+  margin-top:10px;
 
-      letter-spacing:3px;
+  line-height:1.8;
+  font-size:14px;
+}
 
-      color:var(--gold);
+.heart{
+  font-size:34px;
+  color:var(--maroon2);
 
-      font-size:13px;
-    }
+  margin-top:-30px;
+}
 
-    /* =========================
-       GIFT
-    ========================= */
+/* =========================
+   LOVE GALLERY
+========================= */
 
-    .gift-box{
-      margin-top:25px;
+.love-gallery{
+  margin-top:35px;
 
-      background:#faf7f2;
+  display:grid;
+  gap:18px;
+}
 
-      padding:25px;
+.love-gallery img{
+  width:100%;
+  height:420px;
 
-      border-radius:24px;
-    }
+  object-fit:cover;
 
-    .gift-box h3{
-      color:var(--gold-dark);
+  border-radius:28px;
+}
 
-      letter-spacing:2px;
-    }
+/* =========================
+   QUOTE BOX
+========================= */
 
-    .gift-box p{
-      margin-top:10px;
+.quote-box{
+  background:linear-gradient(
+  135deg,
+  var(--maroon),
+  #210208
+  );
 
-      font-size:24px;
+  color:white;
 
-      font-weight:600;
-    }
+  padding:70px 30px;
 
-    .gift-box span{
-      display:block;
-      margin-top:8px;
+  border-radius:30px;
 
-      font-size:13px;
+  max-width:800px;
 
-      color:#777;
-    }
+  margin:auto;
 
-    /* =========================
-       FOOTER
-    ========================= */
+  text-align:center;
+}
 
-    footer{
-      background:var(--dark);
+.quote-icon{
+  color:var(--gold);
 
-      color:white;
+  font-size:60px;
+}
 
-      text-align:center;
+.big-quote{
+  margin-top:12px;
 
-      padding:35px 20px;
+  font-size:22px;
 
-      font-size:13px;
+  line-height:2;
 
-      line-height:1.8;
-    }
+  font-family:'Cormorant Garamond',serif;
+}
 
-    /* =========================
-       FLOWER
-    ========================= */
+.quote-source{
+  margin-top:24px;
 
-    .flower{
-      position:fixed;
+  letter-spacing:4px;
 
-      width:12px;
-      height:12px;
+  color:var(--gold);
 
-      border-radius:50%;
+  font-size:12px;
+}
 
-      background:rgba(255,255,255,0.7);
+/* =========================
+   GIFT
+========================= */
 
-      top:-20px;
+.gift-box{
+  margin-top:22px;
 
-      z-index:9999;
+  background:#faf7f3;
 
-      pointer-events:none;
+  border:1px solid rgba(212,176,106,0.2);
 
-      animation:fall linear infinite;
-    }
+  padding:28px;
 
-    @keyframes fall{
+  border-radius:24px;
+}
 
-      0%{
-        transform:
-        translateY(-100px)
-        scale(0);
-      }
+.gift-box h3{
+  color:var(--gold2);
 
-      100%{
-        transform:
-        translateY(110vh)
-        scale(1);
-      }
+  letter-spacing:3px;
 
-    }
+  font-size:14px;
+}
 
-    @keyframes fadeUp{
+.gift-box p{
+  margin-top:10px;
 
-      from{
-        opacity:0;
-        transform:translateY(40px);
-      }
+  font-size:24px;
+  font-weight:600;
+}
 
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
+.gift-box span{
+  display:block;
 
-    }
+  margin-top:8px;
 
-    /* =========================
-       DESKTOP
-    ========================= */
+  color:#777;
+  font-size:13px;
+}
 
-    @media(min-width:768px){
+/* =========================
+   FOOTER
+========================= */
 
-      .hero h1{
-        font-size:90px;
-      }
+footer{
+  background:#180106;
 
-      .hero h1 span{
-        font-size:60px;
-      }
+  color:white;
 
-      .section-title{
-        font-size:60px;
-      }
+  text-align:center;
 
-      .gallery{
-        grid-template-columns:
-        repeat(3,1fr);
-      }
+  padding:40px 20px;
 
-      .love-gallery{
-        grid-template-columns:
-        repeat(4,1fr);
-      }
+  line-height:2;
+  font-size:13px;
+}
 
-      .countdown{
-        grid-template-columns:
-        repeat(4,1fr);
-      }
+/* =========================
+   FLOWER EFFECT
+========================= */
 
-      .card{
-        padding:70px 55px;
-      }
+.flower{
+  position:fixed;
 
-      .couple-wrapper{
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
-      }
+  width:10px;
+  height:10px;
 
-      .couple-item{
-        width:280px;
-      }
+  background:rgba(255,255,255,0.7);
 
-    }
+  border-radius:50%;
 
-  </style>
+  top:-20px;
 
+  z-index:9999;
+
+  pointer-events:none;
+
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+  0%{
+    transform:
+    translateY(-100px)
+    scale(0);
+  }
+
+  100%{
+    transform:
+    translateY(110vh)
+    scale(1);
+  }
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media(min-width:768px){
+
+  .hero h1{
+    font-size:90px;
+  }
+
+  .section-title{
+    font-size:60px;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .love-gallery{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .countdown{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .card{
+    padding:70px 55px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- AUDIO -->
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio/mp3">
-  </audio>
+<!-- AUDIO -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <!-- NAMA PENERIMA -->
-      <div class="guest-box">
+<div class="guest-box">
 
-        <p class="guest-label">
-          KEPADA YTH.
-        </p>
+<p class="guest-label">
+KEPADA YTH.
+</p>
 
-        <h3 id="guestName">
-          Tamu Undangan
-        </h3>
+<h3 id="guestName">
+Tamu Undangan
+</h3>
 
-      </div>
+</div>
 
-      <p class="save">
-        THE WEDDING OF
-      </p>
+<p class="save">
+THE WEDDING OF
+</p>
 
-      <h1>
+<h1>
+Lisa Dwi Astuti
+<span>&</span>
+Tedi Pratama
+</h1>
 
-        Lisa Dwi Astuti
+<p class="date">
+KAMIS, 04 JUNI 2026
+</p>
 
-        <span>&</span>
+<button class="open-btn">
+Open Invitation
+</button>
 
-        Tedi Pratama
+</div>
 
-      </h1>
+</section>
 
-      <p class="date">
-        Kamis, 04 Juni 2026
-      </p>
+<!-- STORY -->
+<section>
 
-      <button class="open-btn">
-        Open Invitation
-      </button>
+<div class="card">
 
-    </div>
+<p class="section-subtitle">
+OUR STORY
+</p>
 
-  </section>
+<h2 class="section-title">
+Forever Starts Here
+</h2>
 
-  <!-- STORY -->
-  <section>
+<div class="quote">
+“Together is a beautiful place to be.”
+</div>
 
-    <div class="card">
+<p class="description">
 
-      <p class="section-subtitle">
-        OUR STORY
-      </p>
+Dengan penuh rasa syukur dan kebahagiaan,
+kami mengundang Bapak/Ibu/Saudara/i
+untuk hadir dan memberikan doa restu
+di hari bahagia kami.
 
-      <h2 class="section-title">
-        Forever Starts Here
-      </h2>
+</p>
 
-      <div class="quote">
-        “Together is a beautiful place to be.”
-      </div>
+<div class="couple-photo">
 
-      <p class="description">
+<img src="6.jpeg">
 
-        Dengan penuh rasa syukur dan
-        kebahagiaan, kami mengundang
-        Bapak/Ibu/Saudara/i untuk hadir
-        dan memberikan doa restu
-        di hari bahagia kami.
+<div class="photo-overlay"></div>
 
-      </p>
+<div class="photo-text">
 
-      <!-- FOTO PREWEDDING -->
-      <div class="couple-photo">
+<h3>
+Lisa & Tedi
+</h3>
 
-        <img src="6.jpeg">
+<p>
+BLACK SUIT • RED ROSES
+</p>
 
-        <div class="photo-overlay"></div>
+</div>
 
-        <div class="photo-text">
+</div>
 
-          <h3>
-            Lisa & Tedi
-          </h3>
+</div>
 
-          <p>
-            BLACK SUIT • RED ROSES
-          </p>
+</section>
 
-        </div>
+<!-- EVENT -->
+<section>
 
-      </div>
+<div class="card">
 
-    </div>
+<p class="section-subtitle">
+SAVE THE DATE
+</p>
 
-  </section>
+<h2 class="section-title">
+Wedding Event
+</h2>
 
-  <!-- EVENT -->
-  <section>
+<div class="detail">
+📅 Kamis, 04 Juni 2026
+</div>
 
-    <div class="card">
+<div class="detail">
+⏰ 10.00 WIB - Selesai
+</div>
 
-      <p class="section-subtitle">
-        SAVE THE DATE
-      </p>
+<div class="detail">
+📍 Jl. Serumpun Jaya, RT.08,
+Desa Sungai Alai, Tebo Tengah
+</div>
 
-      <h2 class="section-title">
-        Wedding Event
-      </h2>
+<div class="countdown">
 
-      <div class="detail">
-        📅 Kamis, 04 Juni 2026
-      </div>
+<div class="time-box">
+<h3 id="days">0</h3>
+<span>Hari</span>
+</div>
 
-      <div class="detail">
-        ⏰ 10.00 WIB - Selesai
-      </div>
+<div class="time-box">
+<h3 id="hours">0</h3>
+<span>Jam</span>
+</div>
 
-      <div class="detail">
-        📍 Jl. Serumpun Jaya, RT.08,
-        Desa Sungai Alai, Tebo Tengah
-      </div>
+<div class="time-box">
+<h3 id="minutes">0</h3>
+<span>Menit</span>
+</div>
 
-      <!-- COUNTDOWN -->
-      <div class="countdown">
+<div class="time-box">
+<h3 id="seconds">0</h3>
+<span>Detik</span>
+</div>
 
-        <div class="time-box">
-          <h3 id="days">0</h3>
-          <span>Hari</span>
-        </div>
+</div>
 
-        <div class="time-box">
-          <h3 id="hours">0</h3>
-          <span>Jam</span>
-        </div>
+<a
+href="https://maps.app.goo.gl/Ay6tYuG7WN2G4U2M7"
+target="_blank"
+class="btn">
 
-        <div class="time-box">
-          <h3 id="minutes">0</h3>
-          <span>Menit</span>
-        </div>
+Lihat Lokasi
 
-        <div class="time-box">
-          <h3 id="seconds">0</h3>
-          <span>Detik</span>
-        </div>
+</a>
 
-      </div>
+</div>
 
-      <a
-      href="https://maps.app.goo.gl/Ay6tYuG7WN2G4U2M7"
-      target="_blank"
-      class="btn">
+</section>
 
-      Lihat Lokasi
+<!-- GALLERY -->
+<section>
 
-      </a>
+<p class="section-subtitle" style="text-align:center;">
+MOMENTS
+</p>
 
-    </div>
+<h2 class="section-title" style="text-align:center;">
+Gallery
+</h2>
 
-  </section>
+<div class="love-gallery">
 
-  <!-- GALLERY -->
-  <section id="gallery">
+<img src="1.jpeg">
+<img src="2.jpeg">
+<img src="3.jpeg">
+<img src="7.jpeg">
 
-    <p class="section-subtitle">
-      MOMENTS
-    </p>
+</div>
 
-    <h2 class="section-title">
-      Gallery
-    </h2>
+</section>
 
-    <div class="gallery">
+<!-- COUPLE -->
+<section>
 
-      <img src="1.jpeg">
+<div class="card">
 
-      <img src="2.jpeg">
+<p class="section-subtitle">
+THE COUPLE
+</p>
 
-      <img src="3.jpeg">
+<h2 class="section-title">
+Bride & Groom
+</h2>
 
-    </div>
+<div class="couple-wrapper">
 
-  </section>
+<!-- PRIA -->
+<div class="couple-item">
 
-  <!-- COUPLE -->
-  <section>
+<div class="photo-circle">
 
-    <div class="card">
+<img
+src="6.jpeg"
+class="groom-photo">
 
-      <p class="section-subtitle">
-        THE COUPLE
-      </p>
+</div>
 
-      <h2 class="section-title">
-        Bride & Groom
-      </h2>
+<h3>
+Tedi Pratama
+</h3>
 
-      <div class="couple-wrapper">
+<p>
+Putra dari
+<br>
+Bapak Lorem & Ibu Ipsum
+</p>
 
-        <div class="couple-item">
+</div>
 
-          <img src="4.jpeg">
+<div class="heart">
+♥
+</div>
 
-          <h3>
-            Lisa Dwi Astuti
-          </h3>
+<!-- WANITA -->
+<div class="couple-item">
 
-          <p>
-            Putri dari
-            <br>
-            Bapak Lorem & Ibu Ipsum
-          </p>
+<div class="photo-circle">
 
-        </div>
+<img
+src="6.jpeg"
+class="bride-photo">
 
-        <div class="heart">
-          ♥
-        </div>
+</div>
 
-        <div class="couple-item">
+<h3>
+Lisa Dwi Astuti
+</h3>
 
-          <img src="5.jpeg">
+<p>
+Putri dari
+<br>
+Bapak Lorem & Ibu Ipsum
+</p>
 
-          <h3>
-            Tedi Pratama
-          </h3>
+</div>
 
-          <p>
-            Putra dari
-            <br>
-            Bapak Lorem & Ibu Ipsum
-          </p>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</section>
 
-    </div>
+<!-- QUOTE -->
+<section>
 
-  </section>
+<div class="quote-box">
 
-  <!-- LOVE GALLERY -->
-  <section>
+<p class="quote-icon">
+❝
+</p>
 
-    <p class="section-subtitle">
-      PREWEDDING
-    </p>
+<div class="big-quote">
 
-    <h2 class="section-title">
-      Our Moments
-    </h2>
+Dan di antara tanda-tanda kekuasaan-Nya
+ialah Dia menciptakan untukmu pasangan hidup
+dari jenismu sendiri supaya kamu merasa tenteram.
 
-    <div class="love-gallery">
+</div>
 
-      <img src="6.jpeg">
+<p class="quote-source">
+QS. AR-RUM : 21
+</p>
 
-      <img src="7.jpeg">
+</div>
 
-      <img src="8.jpeg">
+</section>
 
-      <img src="9.jpeg">
+<!-- GIFT -->
+<section>
 
-    </div>
+<div class="card">
 
-  </section>
+<p class="section-subtitle">
+WEDDING GIFT
+</p>
 
-  <!-- QUOTE -->
-  <section>
+<h2 class="section-title">
+Gift & Wishes
+</h2>
 
-    <div class="quote-box">
+<p class="description">
 
-      <p class="quote-icon">
-        ❝
-      </p>
+Doa restu Anda merupakan karunia
+yang sangat berarti bagi kami.
 
-      <div class="big-quote">
+</p>
 
-        Dan di antara tanda-tanda kekuasaan-Nya
-        ialah Dia menciptakan untukmu pasangan hidup
-        dari jenismu sendiri supaya kamu merasa tenteram.
+<div class="gift-box">
 
-      </div>
+<h3>
+BANK BCA
+</h3>
 
-      <p class="quote-source">
-        QS. Ar-Rum : 21
-      </p>
+<p>
+1234567890
+</p>
 
-    </div>
+<span>
+a.n Lisa Dwi Astuti
+</span>
 
-  </section>
+</div>
 
-  <!-- GIFT -->
-  <section>
+<div class="gift-box">
 
-    <div class="card">
+<h3>
+DANA
+</h3>
 
-      <p class="section-subtitle">
-        WEDDING GIFT
-      </p>
+<p>
+081234567890
+</p>
 
-      <h2 class="section-title">
-        Gift & Wishes
-      </h2>
+<span>
+a.n Tedi Pratama
+</span>
 
-      <p class="description">
+</div>
 
-        Doa restu Anda merupakan karunia
-        yang sangat berarti bagi kami.
-        Namun jika memberi adalah ungkapan kasih,
-        Anda dapat memberi melalui:
+</div>
 
-      </p>
+</section>
 
-      <div class="gift-box">
+<!-- RSVP -->
+<section>
 
-        <h3>
-          BANK BCA
-        </h3>
+<div class="card">
 
-        <p>
-          1234567890
-        </p>
+<p class="section-subtitle">
+THANK YOU
+</p>
 
-        <span>
-          a.n Lisa Dwi Astuti
-        </span>
+<h2 class="section-title">
+See You There
+</h2>
 
-      </div>
+<p class="description">
 
-      <div class="gift-box">
+Merupakan suatu kehormatan dan
+kebahagiaan bagi kami apabila
+Bapak/Ibu/Saudara/i berkenan hadir
+untuk memberikan doa restu.
 
-        <h3>
-          DANA
-        </h3>
+</p>
 
-        <p>
-          081234567890
-        </p>
+<a href="#" class="btn">
+RSVP Sekarang
+</a>
 
-        <span>
-          a.n Tedi Pratama
-        </span>
+</div>
 
-      </div>
+</section>
 
-    </div>
+<!-- FOOTER -->
+<footer>
 
-  </section>
+© 2026 Wedding Invitation
+<br>
+Lisa & Tedi
 
-  <!-- RSVP -->
-  <section>
+</footer>
 
-    <div class="card">
+<!-- JAVASCRIPT -->
+<script>
 
-      <p class="section-subtitle">
-        THANK YOU
-      </p>
+/* =========================
+   AUTO NAMA PENERIMA
+========================= */
 
-      <h2 class="section-title">
-        See You There
-      </h2>
+const params =
+new URLSearchParams(window.location.search);
 
-      <p class="description">
+const nama = params.get("to");
 
-        Merupakan suatu kehormatan dan
-        kebahagiaan bagi kami apabila
-        Bapak/Ibu/Saudara/i berkenan hadir
-        untuk memberikan doa restu.
+if(nama){
 
-      </p>
+document.getElementById("guestName")
+.innerHTML = decodeURIComponent(nama);
 
-      <a href="#" class="btn">
-        RSVP Sekarang
-      </a>
+}
 
-    </div>
+/* =========================
+   COUNTDOWN
+========================= */
 
-  </section>
+const targetDate =
+new Date("June 4, 2026 00:00:00").getTime();
 
-  <!-- FOOTER -->
-  <footer>
+setInterval(() => {
 
-    © 2026 Wedding Invitation
-    <br>
-    Lisa & Tedi
+const now = new Date().getTime();
 
-  </footer>
+const distance = targetDate - now;
 
-  <!-- JAVASCRIPT -->
-  <script>
+const days = Math.floor(
+distance / (1000*60*60*24)
+);
 
-    /* =========================
-       AUTO NAMA PENERIMA
-    ========================= */
+const hours = Math.floor(
+(distance % (1000*60*60*24))
+/ (1000*60*60)
+);
 
-    const params =
-    new URLSearchParams(window.location.search);
+const minutes = Math.floor(
+(distance % (1000*60*60))
+/ (1000*60)
+);
 
-    const nama = params.get("to");
+const seconds = Math.floor(
+(distance % (1000*60))
+/ 1000
+);
 
-    if(nama){
+document.getElementById("days")
+.innerHTML = days;
 
-      document.getElementById("guestName")
-      .innerHTML = decodeURIComponent(nama);
+document.getElementById("hours")
+.innerHTML = hours;
 
-    }
+document.getElementById("minutes")
+.innerHTML = minutes;
 
-    /* =========================
-       COUNTDOWN
-    ========================= */
+document.getElementById("seconds")
+.innerHTML = seconds;
 
-    const targetDate =
-    new Date("June 4, 2026 00:00:00").getTime();
+},1000);
 
-    setInterval(() => {
+/* =========================
+   FLOWER EFFECT
+========================= */
 
-      const now = new Date().getTime();
+for(let i=0;i<25;i++){
 
-      const distance = targetDate - now;
+let flower =
+document.createElement("div");
 
-      const days = Math.floor(
-        distance / (1000*60*60*24)
-      );
+flower.classList.add("flower");
 
-      const hours = Math.floor(
-        (distance % (1000*60*60*24))
-        / (1000*60*60)
-      );
+flower.style.left =
+Math.random()*100 + "vw";
 
-      const minutes = Math.floor(
-        (distance % (1000*60*60))
-        / (1000*60)
-      );
+flower.style.animationDuration =
+(Math.random()*5 + 5) + "s";
 
-      const seconds = Math.floor(
-        (distance % (1000*60))
-        / 1000
-      );
+flower.style.opacity =
+Math.random();
 
-      document.getElementById("days")
-      .innerHTML = days;
+document.body.appendChild(flower);
 
-      document.getElementById("hours")
-      .innerHTML = hours;
+}
 
-      document.getElementById("minutes")
-      .innerHTML = minutes;
-
-      document.getElementById("seconds")
-      .innerHTML = seconds;
-
-    },1000);
-
-    /* =========================
-       FLOWER EFFECT
-    ========================= */
-
-    for(let i=0;i<20;i++){
-
-      let flower =
-      document.createElement("div");
-
-      flower.classList.add("flower");
-
-      flower.style.left =
-      Math.random()*100 + "vw";
-
-      flower.style.animationDuration =
-      (Math.random()*5 + 5) + "s";
-
-      flower.style.opacity =
-      Math.random();
-
-      document.body.appendChild(flower);
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
